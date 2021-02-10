@@ -1,1 +1,2 @@
-# COSC484-GroupProject
+# Docs-Spots
+Our goal for our web based application is to create a website that is hosted on Heroku, implement a functioning weather API, integrate a functioning chat room, and a platform to view and rate courses, professors, and bars/restaurants around the Towson area. Students will be able to write reviews of the aforementioned items, and be held accountable by a user-sourced upvote/downvote system to ensure accuracy and integrity. Students will be able to communicate with other students in a chat specific to each course they are enrolled in. There will also be a section of the website where students can find activities, restaurants, and events going on around campus.
