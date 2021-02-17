@@ -2,7 +2,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
 body {
   margin: 0;
   padding: 0;
@@ -26,7 +25,6 @@ ul {
 li {
   float: left;
 }
-
 li a {
   display: block;
   color: white;
@@ -36,13 +34,4 @@ li a {
 }
 li a:hover {
   background-color: #111;
-}
-.buttons{
-  float:right;
-  margin:auto;
-  height: 30px;
-}
-.searchbar{
-  margin:5% 0 5% 0;
-  height:30px;
 }

@@ -15,11 +15,12 @@ class Nav extends React.Component{
           <li><a href="./profile">Profile</a></li>
           <li><a href="./chat">Chat</a></li>
           <li><a href="./map">Map</a></li>
-          <li><input class='searchbar' placeholder='search'/></li>
-          <div class='buttons'>
-            <li><button>Register</button></li>
-            <li><button>Login</button></li>
-          </div>
+          <li>
+            <label id='search' htmlFor='searchbar'>Search</label>
+            <input className='searchbar' placeholder='Enter search item here'/>
+          </li>
+          <li><button>Register</button></li>
+          <li><button>Login</button></li>
         </ul>
       </div>
     )
