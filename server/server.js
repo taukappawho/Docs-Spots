@@ -8,7 +8,12 @@ require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(cors());
+corsOptions = {
+  origin: "https://docs-spots.herokuapp.com/",
+  optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 const uri = process.env.ATLAS_URI;
