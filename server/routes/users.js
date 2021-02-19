@@ -22,7 +22,7 @@ router.route('/add').post((req, res) => {
       birthday,
       age,
       email,
-    });
+  });
 
   newUser.save()
     .then(() => res.json('User added!'))
