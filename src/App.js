@@ -1,37 +1,25 @@
-//Import React Router
+import './App.css';
 import React from 'react';
-import Route from 'react-router-dom/Route';
-import { BrowserRouter as Router } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './components/pages/Home';
+import Profile from './components/pages/Profile';
+import Chat from './components/pages/Chat';
+import Nearby from './components/pages/Nearby';
+import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-//Import css file
-import './css/App.css';
-
-//Import classes
-import Home from './classes/home';
-import Profile from './classes/profile';
-import Chat from './classes/chat';
-import Map from './classes/map';
-
-class App extends React.Component {
-  render() {
-    return (
+function App(){
+  return (
     <Router>
-      <div className="App">
-        <Route path="/" exact render={()=>{
-          return(<Home/>);
-        }}/>
-        <Route path="/profile" exact render={()=>{
-          return(<Profile/>);
-        }}/>
-        <Route path="/chat" exact render={()=>{
-          return(<Chat/>);
-        }}/>
-        <Route path="/map" exact render={()=>{
-          return(<Map/>);
-        }}/>
-      </div>
+      <Navbar/>
+      <Switch>
+        <Route path='/' exact component={Home} />
+        <Route path='/profile' component={Profile} />
+        <Route path='/chat' component={Chat} />
+        <Route path='/nearby' component={Nearby} />
+      </Switch>
+      <Footer/>
     </Router>
-    );
-  }
+  );
 }
 export default App;

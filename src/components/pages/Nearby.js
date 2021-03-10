@@ -1,0 +1,24 @@
+import React from 'react';
+import {Container,Row,Col} from 'reactstrap';
+
+function Nearby(props){
+  return(
+    <Container>
+      <h1>Near You</h1>
+      <Container>
+        <Row>
+          <p align="center">This website is under construction! Check in later for updates!</p>
+        </Row>
+        <Row>
+          <Col>
+            <iframe width="500" height="400" frameborder="0"
+            src="https://www.bing.com/maps/embed?h=400&w=500&cp=39.398698652149086~-76.6038566685178&lvl=14&typ=d&sty=r&src=SHELL&FORM=MBEDV8" 
+            scrolling="no">
+            </iframe>
+          </Col>
+        </Row>
+      </Container>
+    </Container>
+  );
+}
+export default Nearby;
