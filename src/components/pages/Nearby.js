@@ -1,10 +1,12 @@
 import React from 'react';
 import {Container,Row,Col} from 'reactstrap';
+import '../../App.css'
+
 
 function Nearby(props){
   return(
-    <Container>
-      <h1>Near You</h1>
+    <div>
+      <h1 className="nearby">Near You</h1>
       <Container>
         <Row>
           <p align="center">This website is under construction! Check in later for updates!</p>
@@ -18,7 +20,7 @@ function Nearby(props){
           </Col>
         </Row>
       </Container>
-    </Container>
+    </div>
   );
 }
 export default Nearby;
