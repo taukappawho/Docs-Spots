@@ -2,7 +2,6 @@ import React from 'react';
 import {Container} from 'reactstrap';
 import '../../App.css'
 
-
 function Chat(props){
   return(
     <Container>

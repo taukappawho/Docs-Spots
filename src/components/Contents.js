@@ -35,23 +35,10 @@ function Contents() {
                         label="Adventure"
                         path="/services"
                         />
-                        <ContentItem 
-                        src="images/img-4.jpg"
-                        text="Travel through the islands of Bali"
-                        label="Luxury"
-                        path="/services"
-                        />
-                        <ContentItem 
-                        src="images/img-5.jpg"
-                        text="Travel through the islands of Bali"
-                        label="Luxury"
-                        path="/services"
-                        />
                     </ul> */}
                 </div>
             </div>
         </div>
     )
 }
-
 export default Contents
