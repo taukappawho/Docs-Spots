@@ -10,13 +10,13 @@ import Register_login from './components/pages/Register_login';
 import Log from './components/Log';
 import Logout from './components/Logout';
 import verifyId from './components/verifyId';
-import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 
-function App(){
+export default function App(){
   return (
     <Router>
       <Navbar/>
-        <h4 id="Loginout"><Log/></h4>
+        <h4><Log/></h4>
       <Switch>
         <Route path='/' exact component={Home} />
         <ProtectedRoute path='/profile' comp={Profile} />
@@ -28,7 +28,6 @@ function App(){
     </Router>
   );
 }
-export default App;
 
 window.onstorage = () => {
   if (!verifyId())
