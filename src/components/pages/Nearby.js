@@ -1,25 +1,84 @@
-import React from 'react';
-import {Container,Row,Col} from 'reactstrap';
-import '../../App.css'
+import {Col,Container,Row} from 'reactstrap'
+import {Timeline} from 'react-twitter-widgets'
+import {React,useState,useEffect} from 'react'
+import {GoogleMap, LoadScript} from '@react-google-maps/api'
 
 function Nearby(props){
+  const containerStyle = {
+    width: '400px',
+    height: '400px'
+  };
+  var location={
+    city:"Towson,MD,US",
+    coordinates:{
+      lat: 39.4015,
+      lng:-76.6019
+    }
+  }
+  var [weather,setWeather]=useState({
+    temp:0,
+    feels: 0,
+    hum:0,
+    sunrise:18000,
+    sunset:18000,
+    desc:"Sunny"
+  })
+  useEffect(() => { 
+    getWeather();
+  }, [])
+  var getWeather = () => {
+    fetch(`${process.env.REACT_APP_SERVER_URL}/api/weather?location=${location.city}`)
+    .then(response=>response.json())
+    .then(data => {
+      var sunrise=new Date(data['sys']['sunrise'] * 1000);
+      var rise_time=`0${sunrise.getHours()}:${sunrise.getMinutes()}:${sunrise.getSeconds()}`;
+      var sunset=new Date(data['sys']['sunset'] * 1000);
+      var set_time=`${sunset.getHours()}:${sunset.getMinutes()}:${sunset.getSeconds()}`;
+      setWeather({
+        desc:data['weather'][0]['description'],
+        temp:((data['main']['temp'] - 273.15)* 1.8000 + 32.00).toFixed(2), //converts from K to F
+        feels:((data['main']['feels_like'] - 273.15)* 1.8000 + 32.00).toFixed(2),
+        hum:data['main']['humidity'],
+        sunrise:rise_time,
+        sunset:set_time
+      })
+    })
+    .catch(err => alert(err))
+  }
   return(
-    <div>
-      <h1 className="nearby">Near You</h1>
-      <Container>
-        <Row>
-          <p align="center">This website is under construction! Check in later for updates!</p>
-        </Row>
+    <Container className="App-content">
+      <h1>Nearby</h1>
+      <Container className="display">
         <Row>
           <Col>
-            <iframe width="500" height="400" frameborder="0"
-            src="https://www.bing.com/maps/embed?h=400&w=500&cp=39.398698652149086~-76.6038566685178&lvl=14&typ=d&sty=r&src=SHELL&FORM=MBEDV8" 
-            scrolling="no">
-            </iframe>
+          <Timeline
+            dataSource={{
+              sourceType: 'profile',
+              screenName: 'TowsonU'
+            }}
+            options={{
+              height: '400'
+            }}
+          />
+          </Col>
+          <Col>
+            <Row><Col>Weather in {location.city}</Col></Row>
+            <Row><Col>Description:</Col><Col>{weather.desc}</Col></Row>
+            <Row><Col>Temperature:</Col><Col>{weather.temp}&#176; F</Col></Row>
+            <Row><Col>Feels Like:</Col><Col>{weather.feels}&#176; F</Col></Row>
+            <Row><Col>Humidity:</Col><Col>{weather.hum}%</Col></Row>
+            <Row><Col>Sunrise:</Col><Col>{weather.sunrise}</Col></Row>
+            <Row><Col>Sunset:</Col><Col>{weather.sunset}</Col></Row>
+          </Col>
+          <Col>
+          {/* <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1KnBFPTeiXNGAUgceZoEXc8lOibiFr74C" width="400" height="400"></iframe> */}
+            <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_KEY}>
+              <GoogleMap mapContainerStyle={containerStyle} zoom={15} center={location.coordinates}/>
+            </LoadScript>
           </Col>
         </Row>
       </Container>
-    </div>
+    </Container>
   );
 }
 export default Nearby;
