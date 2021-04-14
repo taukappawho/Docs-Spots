@@ -6,7 +6,6 @@ import Home from './components/pages/Home';
 import Profile from './components/pages/Profile';
 import Chat from './components/pages/Chat';
 import Nearby from './components/pages/Nearby';
-import Log from './components/Log';
 import Logout from './components/Logout';
 import verifyId from './components/verifyId';
 import {BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
@@ -15,17 +14,16 @@ export default function App(){
   return (
     <Router>
       <Navbar/>
-        <h4><Log/></h4>
       <Switch>
         <Route path='/' exact component={Home} />
         <ProtectedRoute path='/profile' comp={Profile} />
         <ProtectedRoute path='/chat' comp={Chat} />
-        <ProtectedRoute path='/nearby' comp={Nearby} />
+        <ProtectedRoute path='/nearby' comp={Nearby} /> 
         <Route path='*' component={Home} />
       </Switch>
       <Footer/>
-    </Router>
-  );
+    </Router>  
+  )
 }
 
 window.onstorage = () => {
@@ -41,4 +39,4 @@ const ProtectedRoute = ({comp: Component, ...rest}) => (
     sessionStorage.getItem('token') ? (<Component {...props} />) : (<Redirect to="/" />)
   }
   />
-  );
+);

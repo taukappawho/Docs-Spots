@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
-import { Button } from './Button';
+import Log from './Log';
+import Logout from './Logout';
+import verifyId from './verifyId';
 import './Navbar.css';
 
 function Navbar(){
@@ -19,44 +21,58 @@ function Navbar(){
         showButton();
     },[]);
     window.addEventListener("resize", showButton);
-  return (
-    <>
-      <nav className="navbar">
-            <div className="navbar-container">
-                <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-                    Doc's Spots <i className="fas fa-university"/>
-                </Link>
-                <div className="menu-icon" onClick={handleClick}>
-                    <i className={click ? "fas fa-times" : "fas fa-bars"}/>
+    if(verifyId()){
+        return (
+            <nav className="navbar">
+                <div className="navbar-container">
+                    <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+                        Doc's Spots <i className="fas fa-university"/>
+                    </Link>
+                    <div className="menu-icon" onClick={handleClick}>
+                        <i className={click ? "fas fa-times" : "fas fa-bars"}/>
+                    </div>
+                    <ul className={click ? "nav-menu active" : "nav-menu"}>
+                        <li className="nav-item">
+                            <Link to="/nearby" className="nav-links" onClick={closeMobileMenu}>
+                                Nearby
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/profile" className="nav-links" onClick={closeMobileMenu}>
+                                Profile
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/chat" className="nav-links" onClick={closeMobileMenu}>
+                                Chat
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Logout/>
+                        </li>
+                    </ul>
                 </div>
-                <ul className={click ? "nav-menu active" : "nav-menu"}>
-                    
-                    <li className="nav-item">
-                        <Link to="/nearby" className="nav-links" onClick={closeMobileMenu}>
-                            Nearby
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to="/profile" className="nav-links" onClick={closeMobileMenu}>
-                            Profile
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to="/chat" className="nav-links" onClick={closeMobileMenu}>
-                            Chat
-                        </Link>
-                    </li>
-                    
-                    <li className="nav-item">
-                        <Link to="/register_login" className="nav-links-mobile" onClick={closeMobileMenu}>
-                            Register/Login
-                        </Link>
-                    </li>
-                </ul>
-                {button && <Button buttonStyle="btn--outline">Register/Login</Button>}
-            </div>
-        </nav>
-    </>
-  )
+            </nav>
+        )
+    }
+    else{
+        return (
+            <nav className="navbar">
+                <div className="navbar-container">
+                    <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+                        Doc's Spots <i className="fas fa-university"/>
+                    </Link>
+                    <div className="menu-icon" onClick={handleClick}>
+                        <i className={click ? "fas fa-times" : "fas fa-bars"}/>
+                    </div>
+                    <ul className={click ? "nav-menu active" : "nav-menu"}>
+                        <li className="nav-item">
+                            <Log/>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        )
+    }
 };
 export default Navbar;

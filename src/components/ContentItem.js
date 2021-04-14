@@ -1,7 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-
 function ContentItem(props) {
     return (
         <>
@@ -18,5 +17,4 @@ function ContentItem(props) {
         </>
     )
 }
-
 export default ContentItem
