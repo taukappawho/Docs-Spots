@@ -1,71 +1,39 @@
+//Import CSS styling, React and Link 
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Button } from './Button'
 import './Footer.css'
 
 function Footer() {
   return (
+      //Div tag used to contain all the contents within the footer
       <div className="footer-container">
-          {/* <div className="footer-links">
-              <div className="footer-link-wrapper">
-                  <div className="footer-link-items">
-                      <h2>About us</h2>
-                      <Link to="/sign-up">How it works</Link>
-                      <Link to="/">Testimonials</Link>
-                      <Link to="/">Careers</Link>
-                      <Link to="/">Investors</Link>
-                      <Link to="/">Terms of Service</Link>
-                  </div>
-                  <div className="footer-link-items">
-                      <h2>Contact us</h2>
-                      <Link to="/sign-up">How it works</Link>
-                      <Link to="/">Testimonials</Link>
-                      <Link to="/">Careers</Link>
-                      <Link to="/">Investors</Link>
-                      <Link to="/">Terms of Service</Link>
-                  </div>
-              </div>
-              <div className="footer-link-wrapper">
-                  <div className="footer-link-items">
-                      <h2>Videos</h2>
-                      <Link to="/sign-up">How it works</Link>
-                      <Link to="/">Testimonials</Link>
-                      <Link to="/">Careers</Link>
-                      <Link to="/">Investors</Link>
-                      <Link to="/">Terms of Service</Link>
-                  </div>
-                  <div className="footer-link-items">
-                      <h2>Social Media</h2>
-                      <Link to="/sign-up">How it works</Link>
-                      <Link to="/">Testimonials</Link>
-                      <Link to="/">Careers</Link>
-                      <Link to="/">Investors</Link>
-                      <Link to="/">Terms of Service</Link>
-                  </div>
-              </div>
-          </div>*/}
-          <section className="social-media">
-              <div className="social-media-wrap">
-                  <div className="footer-logo">
-                      <Link to="/" className="social-logo">
-                          Doc's Spots <i className="fas fa-university"/>
-                      </Link>
-                  </div>
-                  <small className="website-rights"><a href="https://www.towson.edu">Towson Univeristy</a></small>
-                  <div className="social-icons">
-                      <Link className="social-icon-link facebook" to="/" target="_blank" aria-label="Facebook">
-                          <i className="fab fa-facebook-f"/>
-                      </Link>
-                      <Link className="social-icon-link instagram" to="/" target="_blank" aria-label="instagram">
-                          <i className="fab fa-instagram"/>
-                      </Link>
-                      <Link className="social-icon-link twitter" to="/" target="_blank" aria-label="twitter">
-                          <i className="fab fa-twitter"/>
-                      </Link>
-                  </div>
-              </div> 
-          </section>
+          {/* Displaying the title of the website as a link */}
+            <div className="docSpotsTitle">
+                <Link to="/" className="docSpotsTitleLogo">
+                    Doc's Spots
+                </Link>
+            </div>
+            {/* Displaying Towson University as a link to the towson university website */}
+            <div className="towson"><a href="https://www.towson.edu">Towson Univeristy</a></div>
+            <div className="socialMedia">
+                {/* Displaying the twitter logo and when clicked goes to twitter's website */}
+                <Link className="media" target=" ">
+                <a href="https://twitter.com/"><i className="fab fa-twitter"/></a>
+                </Link>
+                {/* Displaying the instagram logo and when clicked goes to instagram's website */}
+                <Link className="media" target=" ">
+                <a href="https://www.instagram.com/"><i className="fab fa-instagram"/></a>
+                </Link>
+                {/* Displaying the facebook logo and when clicked goes to facebook's website */}
+                <Link className="media" target=" ">
+                <a href="https://www.facebook.com/"><i className="fab fa-facebook-f"/></a>
+                </Link>
+                
+            </div>
+            {/* Printing the group members of the project */}
+            <p>Group Members: Arun Kulkarni, John Richard, Benjamin King, James Naurot, Neal Bhalodia </p>
       </div>
   )
 }
 export default Footer
+
