@@ -4,17 +4,19 @@ import '../App.css';
 
 function TopSection() {
     return (
-        <div className="hero-container">
-            {/* <video src="/videos/video-2.mp4" autoPlay loop muted/> */}
-            {/* <img src="img1.jpg"/> */}
+        //This js file is used to display some of the contents of the homepage.
+        //Such as a welcome message and a get started button 
+        <div className="top">
             <h1>Welcome to Doc's Spots!</h1>
             <p>Let's get started</p>
-            <div className="hero-btns">
-                <Button className="btns" buttonStyle="btn--outline" buttonSize="btn--large">GET STARTED</Button>
-                {/* <Button className="btns" buttonStyle="btn--primary" buttonSize="btn--large">WATCH TRAILER <i className="far fa-play-circle"/></Button> */}
+            <div className="button">
+                <Button className="theButton" 
+                buttonStyle="btn--outline" 
+                buttonSize="btn--large">
+                    GET STARTED
+                </Button>
             </div>
         </div>
     )
 }
-
 export default TopSection

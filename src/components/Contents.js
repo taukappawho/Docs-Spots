@@ -28,14 +28,6 @@ function Contents() {
                         path="/chat"
                         />
                     </ul>
-                    {/* <ul className="cards__items">
-                        <ContentItem 
-                        src="images/img-3.jpg"
-                        text="Explore the hidden waterfall deep inside the Amzon Jungle"
-                        label="Adventure"
-                        path="/services"
-                        />
-                    </ul> */}
                 </div>
             </div>
         </div>
