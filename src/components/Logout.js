@@ -20,7 +20,7 @@ function Logout(){
     onFailure,
   });
   return (
-    <Button buttonStyle=".btn--large" onClick={ signOut } >Sign out</Button>
+    <Button buttonStyle=".btn--large" onClick={ signOut }>Sign out</Button>
   );
 }
 export default Logout;
