@@ -23,15 +23,14 @@
 .btn-medium{
     padding: 8px 20px;
     font-size: 20px;
-
 }
 .btn--large{
     padding: 12px 26px;
     font-size: 20px;
 }
 .btn--medium:hover, .btn--large:hover{
-    background: #FFF;
-    color: #242424;
+    background: #3C3C3C;
+    color: #FFBB00;
     transition: all 0.3s ease-out;
 
 }

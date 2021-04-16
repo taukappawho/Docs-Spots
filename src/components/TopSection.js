@@ -13,7 +13,7 @@ function TopSection() {
                 <Button className="theButton" 
                 buttonStyle="btn--outline" 
                 buttonSize="btn--large">
-                    GET STARTED
+                    START HERE
                 </Button>
             </div>
         </div>
