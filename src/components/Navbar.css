@@ -5,13 +5,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 20px;
     top: 0;
   }
   
   .navbarGroup {
     display: flex;
-    justify-content: center;
     align-items: center;
     height: 80px;
     max-width: 1500px;
@@ -21,8 +20,7 @@
     color: #fff;
     justify-self: start;
     margin-left: 20px;
-    text-decoration: none;
-    font-size: 2rem;
+    font-size: 35px;
     display: flex;
     align-items: center;
   }
@@ -34,7 +32,7 @@
     text-align: center;
     width: 60vw;
     justify-content: end;
-    margin-right: 2rem;
+    margin-right: 20px;
   }
   
   .nav-item {
@@ -88,8 +86,7 @@
       background: #3c3c3c;
       left: 0;
       opacity: 1;
-      transition: all 0.5s ease;
-      z-index: 1;
+      transition: all 0.3s ease;
     }
   
     .nav-links {
@@ -102,14 +99,12 @@
     .nav-links:hover {
       background-color: #3c3c3c;
       color: #FFBB00;
-      border-radius: 0;
     }
   
     .navbar-logo {
       position: absolute;
       top: 0;
       left: 0;
-      transform: translate(25%, 50%);
     }
   
     .menu-icon {
@@ -119,12 +114,10 @@
       right: 0;
       transform: translate(-100%, 60%);
       font-size: 1.8rem;
-      cursor: pointer;
     }
   
     .fa-times {
       color: #fff;
-      font-size: 2rem;
     }
   
     .nav-links-mobile {
@@ -133,7 +126,6 @@
       margin: 2rem auto;
       border-radius: 4px;
       width: 80%;
-      text-decoration: none;
       font-size: 1.5rem;
       background-color: transparent;
       color: #fff;
