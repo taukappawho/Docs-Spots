@@ -1,6 +1,8 @@
 import React from 'react'
 import './Button.css'
 import {Link} from 'react-router-dom'
+
+//Below are predefined style variable names that will be used
 const STYLES =["btn--primary","btn--outline"];
 const SIZES = ["btn--medium","btn--large"];
 

@@ -39,7 +39,7 @@ function Login(){
   
  return (
     <button onClick={signIn}>
-      <p>Google Signin</p>
+      <p style="color: black">Google Signin</p>
     </button>
   );
 }

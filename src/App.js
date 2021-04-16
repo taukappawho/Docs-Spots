@@ -6,6 +6,7 @@ import Home from './components/pages/Home';
 import Profile from './components/pages/Profile';
 import Chat from './components/pages/Chat';
 import Nearby from './components/pages/Nearby';
+import Register_login from './components/pages/Register_login';
 import Log from './components/Log';
 import Logout from './components/Logout';
 import verifyId from './components/verifyId';
@@ -21,6 +22,7 @@ export default function App(){
         <ProtectedRoute path='/profile' comp={Profile} />
         <ProtectedRoute path='/chat' comp={Chat} />
         <ProtectedRoute path='/nearby' comp={Nearby} />
+        <ProtectedRoute path='/register_login' comp={Register_login} />
         <Route path='*' component={Home} />
       </Switch>
       <Footer/>

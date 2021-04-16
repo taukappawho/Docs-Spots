@@ -27,6 +27,7 @@
 .btn--large{
     padding: 12px 26px;
     font-size: 20px;
+    color:#242424
 }
 .btn--medium:hover, .btn--large:hover{
     background: #3C3C3C;
