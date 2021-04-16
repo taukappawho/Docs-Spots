@@ -30,7 +30,11 @@ function Navbar(){
                     <i className={click ? "fas fa-times" : "fas fa-bars"}/>
                 </div>
                 <ul className={click ? "nav-menu active" : "nav-menu"}>
-                    
+                    <li className="nav-item">
+                        <Link to="/reviews" className="nav-links" onClick={closeMobileMenu}>
+                            Reviews
+                        </Link>
+                    </li>
                     <li className="nav-item">
                         <Link to="/nearby" className="nav-links" onClick={closeMobileMenu}>
                             Nearby
@@ -41,6 +45,9 @@ function Navbar(){
                             Profile
                         </Link>
                     </li>
+
+                    
+
                     <li className="nav-item">
                         <Link to="/chat" className="nav-links" onClick={closeMobileMenu}>
                             Chat
