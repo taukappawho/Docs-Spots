@@ -31,7 +31,6 @@ window.onstorage = () => {
     Logout();
 };
 
-
 const ProtectedRoute = ({comp: Component, ...rest}) => (
   <Route
   {...rest}
