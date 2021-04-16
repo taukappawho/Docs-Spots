@@ -10,11 +10,11 @@ function TopSection() {
             <h1>Welcome to Doc's Spots!</h1>
             <p>Let's get started</p>
             <div className="button">
-                <Button className="theButton" 
+                {/* <Button className="theButton" 
                 buttonStyle="btn--outline" 
                 buttonSize="btn--large">
                     START HERE
-                </Button>
+                </Button> */}
             </div>
         </div>
     )
