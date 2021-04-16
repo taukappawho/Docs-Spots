@@ -23,7 +23,7 @@ export default function App(){
         <ProtectedRoute path='/chat' comp={Chat} />
         <ProtectedRoute path='/nearby' comp={Nearby} />
         <ProtectedRoute path='/register_login' comp={Register_login} />
-        <Route path="*" component={Home} />
+        <Route path='*' component={Home} />
       </Switch>
       <Footer/>
     </Router>
