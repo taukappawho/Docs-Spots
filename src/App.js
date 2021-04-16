@@ -18,7 +18,7 @@ import axios from 'axios';
 export default function App(){
   const [reviewPosts, setReviewPosts] = useState([])
   useEffect(() => {
-    axios.get('https://docs-spots.herokuapp.com/api/reviews')
+    axios.get(`${process.env.REACT_APP_SERVER_URL}/api/reviews`)
     .then(res => setReviewPosts(res.data))
     .catch(error => console.log(error));
   });

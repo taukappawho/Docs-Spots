@@ -22,7 +22,7 @@ const AddReview = () => {
         setContent('');
         setAuthorName('');
 
-        axios.post('https://docs-spots.herokuapp.com/api/reviews/add', reviews)
+        axios.post(`${process.env.REACT_APP_SERVER_URL}/reviews/add`, reviews)
             .then(res => console.log(res.data))
             .catch(err => {
                 console.log(err);
