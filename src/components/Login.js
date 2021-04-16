@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useGoogleLogin } from 'react-google-login';
 import { refreshTokenSetup } from '../utils/refreshToken';
-// var axios = require('axios');
+
+import googleButton from './btn_google_signin_dark.png';
 
 const clientId = process.env.REACT_APP_AUTH_CLIENT_ID;
 
@@ -39,7 +40,7 @@ function Login(){
   
  return (
     <button onClick={signIn}>
-      <p style="color: black">Google Signin</p>
+      <img src={googleButton}/>
     </button>
   );
 }

@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
-import { Button } from './Button';
+import Log from './Log';
 import './Navbar.css';
 
 function Navbar(){
@@ -52,12 +52,9 @@ function Navbar(){
                     
                     {/* This is the button used to have a user sign in to the webpage */}
                     <li className="nav-item">
-                        <Link to="/register_login" className="nav-links-mobile" onClick={closeMobileMenu}>
-                            Register/Login
-                        </Link>
+                        <Log/>
                     </li>
                 </ul>
-                {button && <Button buttonStyle="btn--outline">Register/Login</Button>}
             </div>
         </nav>
     </>
