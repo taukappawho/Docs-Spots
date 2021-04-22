@@ -1,71 +1,67 @@
 /* General styling for the nav bar as a whole */
 .navbar {
-    background: #3c3c3c;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    top: 0;
-  }
+  background: #3c3c3c;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  /* top: 0; */
+}
+
+.navbarGroup {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  max-width: 1500px;
+}
+
+.navbarTitle {
+  color: #fff;
+  justify-self: start;
+  margin-left: 20px;
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+}
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 60vw;
+  justify-content: end;
+  margin-right: 20px;
+}
+
+.navbarItem {
+  height: 80px;
+}
+
+.navbarTab {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+}
+
+.fa-bars {
+  color: #fff;
+}
+
+.nav-links-mobile {
+  display: none;
+}
+
+/* Styling to prevent the menu bars from being displayed next to the title */
+.menu-icon {
+  display: none;
+}
   
-  .navbarGroup {
-    display: flex;
-    align-items: center;
-    height: 80px;
-    max-width: 1500px;
-  }
-  
-  .navbar-logo {
-    color: #fff;
-    justify-self: start;
-    margin-left: 20px;
-    font-size: 35px;
-    display: flex;
-    align-items: center;
-  }
-  .nav-menu {
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    grid-gap: 10px;
-    list-style: none;
-    text-align: center;
-    width: 60vw;
-    justify-content: end;
-    margin-right: 20px;
-  }
-  
-  .nav-item {
-    height: 80px;
-  }
-  
-  .nav-links {
-    color: #fff;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    height: 100%;
-  }
-  
-  .nav-links:hover {
-    border-bottom: 4px solid #fff;
-    transition: all 0.2s ease-out;
-  }
-  
-  .fa-bars {
-    color: #fff;
-  }
-  
-  .nav-links-mobile {
-    display: none;
-  }
-  
-  .menu-icon {
-    display: none;
-  }
-  
-  @media screen and (max-width: 960px) {
+  /* @media screen and (max-width: 960px) {
     .NavbarItems {
       position: relative;
     }
@@ -139,4 +135,4 @@
       color: #242424;
       transition: 250ms;
     }
-  }
+  } */
