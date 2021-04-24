@@ -4,11 +4,8 @@ import Log from './Log';
 import './Navbar.css';
 
 function Navbar(){
-    //Below handles the click of each tab and the menu feature
-  const [click, setClick] = useState(false);
-
-    const menu = () => setClick(false);
     if(sessionStorage.token){
+        //Printing the navbar contents if the user is logged in
         return (
             <>
               <nav className="navbar">
@@ -18,7 +15,7 @@ function Navbar(){
                             Doc's Spots
                         </Link>
                        
-                        <ul className={click ? "nav-menu active" : "nav-menu"}>
+                        <ul className="nav-menu">
                             {/* Below are the tabs a user can click on */}
                             <li className="navbarItem">
                                 <Link to="/nearby" className="navbarTab">
@@ -46,6 +43,7 @@ function Navbar(){
           )
     }
     else{
+        //Printing only the login button if the user is logged out on the nav bar
         return (
             <>
             <nav className="navbar">
@@ -54,7 +52,7 @@ function Navbar(){
                         <Link to="/" className="navbarTitle" >
                             Doc's Spots
                         </Link>
-                        <ul className={click ? "nav-menu active" : "nav-menu"}>
+                        <ul className="nav-menu">
                             {/* This is the button used to have a user sign in to the webpage */}
                             <li className="navbarItem">
                                 <Log className="navbarTab"/>

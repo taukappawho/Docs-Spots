@@ -26,6 +26,7 @@ function Nearby(props){
   useEffect(() => { 
     getWeather();
   }, [])
+  
   var getWeather = () => {
     fetch(`${process.env.REACT_APP_SERVER_URL}/api/weather?location=${location.city}`)
     .then(response=>response.json())
