@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {Button} from 'reactstrap';
 import { useGoogleLogout } from 'react-google-login';
 
 
@@ -20,7 +21,7 @@ function Logout(){
     onFailure,
   });
   return (
-    <button onClick={ signOut }>Sign out</button>
+    <Button color="warning" onClick={signOut}>Sign out</Button>
   );
 }
 export default Logout;
