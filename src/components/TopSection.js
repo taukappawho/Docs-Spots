@@ -1,4 +1,3 @@
-import {Button} from './Button';
 import './TopSection.css';
 import '../App.css';
 

@@ -11,6 +11,7 @@ import verifyId from './components/verifyId';
 import {BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 
 export default function App(){
+  var image='./components/img1.jpg';
   return (
     <Router>
       <Navbar/>

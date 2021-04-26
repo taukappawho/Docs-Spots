@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useGoogleLogout } from 'react-google-login';
-import {Button} from './Button.js'
+import {Button} from 'reactstrap'
 
 const clientId = process.env.REACT_APP_AUTH_CLIENT_ID;
 
