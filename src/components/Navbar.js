@@ -17,7 +17,7 @@ function Navbar(){
                         <ul className="nav-menu">
                             {/* Below are the tabs a user can click on */}
                             <li className="nav-item">
-                                <Link to="/reviews" className="nav-links" onClick={closeMobileMenu}>
+                                <Link to="/reviews" className="nav-links">
                                     Reviews
                                 </Link>
                             </li>
