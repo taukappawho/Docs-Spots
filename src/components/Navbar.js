@@ -14,9 +14,13 @@ function Navbar(){
                         <Link to="/" className="navbarTitle">
                             Doc's Spots
                         </Link>
-                       
                         <ul className="nav-menu">
                             {/* Below are the tabs a user can click on */}
+                            <li className="nav-item">
+                                <Link to="/reviews" className="nav-links" onClick={closeMobileMenu}>
+                                    Reviews
+                                </Link>
+                            </li>
                             <li className="navbarItem">
                                 <Link to="/nearby" className="navbarTab">
                                     Nearby

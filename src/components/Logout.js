@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {Button} from 'reactstrap';
 import { useGoogleLogout } from 'react-google-login';
-
+import {Button} from 'reactstrap'
 
 const clientId = process.env.REACT_APP_AUTH_CLIENT_ID;
 
