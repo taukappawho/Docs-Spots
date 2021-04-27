@@ -1,7 +1,9 @@
 h1{
   text-align:center;
 }
-
+.login-text{
+  color:#fff;
+}
 .footer {
   position: fixed;
   left: 0;
@@ -62,4 +64,7 @@ h1{
   background-repeat: no-repeat;
   color: #fff;
   font-size: 100px;
+}
+.addReview{
+  float:right;
 }
