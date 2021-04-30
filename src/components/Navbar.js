@@ -16,8 +16,8 @@ function Navbar(){
                         </Link>
                         <ul className="nav-menu">
                             {/* Below are the tabs a user can click on */}
-                            <li className="nav-item">
-                                <Link to="/reviews" className="nav-links">
+                            <li className="navbarItem">
+                                <Link to="/reviews" className="navbarTab">
                                     Reviews
                                 </Link>
                             </li>
