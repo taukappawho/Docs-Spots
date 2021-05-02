@@ -1,13 +1,37 @@
 import React from 'react';
-import {Container} from 'reactstrap';
-import '../../App.css'
+import Image from '../Image';
+import {Button,Container,Input,Row,Col} from 'reactstrap';
+import '../../App.css';
+import image from '../john_profile.jpeg';
 
 function Profile(props){
   return(
     <Container>
-      <h1>Profile</h1>
+      <h1>{sessionStorage.name.substring(0,sessionStorage.name.indexOf(" "))}'s Profile</h1>
       <Container>
-        <p align="center">This website is under construction! Check in later for updates!</p>
+        <Row>
+          <Col className='text-center'></Col>
+          <Col className='text-center'><Image pic={image}/></Col>
+          <Col className='text-center'></Col>
+        </Row>
+        <Row>
+          <Col className='text-center'></Col>
+          <Col className='text-center'>Upload a new photo <Button color="warning">Upload</Button></Col>
+          <Col className='text-center'></Col>
+        </Row>
+        <Row>
+          <Col className='text-right'>Update Username:</Col>
+          <Col className='text-center'><Input placeholder='Doc'></Input></Col>
+          <Col></Col>
+        </Row>
+        <Row>
+          <Col className='text-right'>Update Phone:</Col>
+          <Col className='text-center'><Input placeholder='(410) 767-6500'></Input></Col>
+          <Col></Col>
+        </Row>
+        <Row>
+          <Col className='text-center'><Container>Profile related stuff.</Container></Col>
+        </Row>
       </Container>
     </Container>
   );
