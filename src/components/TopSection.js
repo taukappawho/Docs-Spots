@@ -3,6 +3,7 @@ import '../App.css';
 
 function TopSection() {
     if(sessionStorage.token){
+        // Printing the contents of the home page if the user is logged in
         return (
             <div className="top">
                 <h1>Welcome to Doc's Spots!</h1>
@@ -11,6 +12,7 @@ function TopSection() {
         )
     }
     else{
+        // Printing the contents of the home page if the user is logged out
         return (
             <div className="top">
                 <h1>Welcome to Doc's Spots!</h1>

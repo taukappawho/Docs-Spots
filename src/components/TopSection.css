@@ -12,12 +12,12 @@
     align-items: center;
     object-fit: contain;
 }
-/* Styling used to ONLY style the h1 tag for the TopSection.js page hence the > */
+/* Styling used to ONLY style the h1 tag for the TopSection.js page hence the > used for the parent child relationship*/
 .top > h1{
     color: rgb(255, 255, 255);
     font-size: 100px;
 }
-/* Styling used to ONLY style the p tag for the TopSection.js page hence the > */
+/* Styling used to ONLY style the p tag for the TopSection.js page hence the > used for the parent child relationship*/
 .top > p{
     color: rgb(255, 255, 255);
     font-size: 40px;
@@ -25,11 +25,4 @@
 /* Positioning the button in the correct location */
 .button{
     margin-top: 32px;
-}
-/* Setting the correct font size and margin when the page is shrunk  */
-@media screen and (max-width: 960px){
-    .top > h1{
-        font-size: 70px;
-        margin-top: -150px;
-    }
 }

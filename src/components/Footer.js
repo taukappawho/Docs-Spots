@@ -31,7 +31,7 @@ function Footer() {
                 
             </div>
             {/* Printing the group members of the project */}
-            <p>Group Members: Arun Kulkarni, John Richard, Benjamin King, James Naurot, Neal Bhalodia </p>
+            <p className="groupMembers">Group Members: Arun Kulkarni, John Richard, Benjamin King, James Naurot, Neal Bhalodia </p>
       </div>
   )
 }
