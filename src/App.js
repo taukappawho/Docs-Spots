@@ -5,7 +5,6 @@ import Footer from './components/Footer';
 import Home from './components/pages/Home';
 import Profile from './components/pages/Profile';
 import Chat from './components/pages/Chat';
-import Join from './components/pages/Join';
 import Nearby from './components/pages/Nearby';
 import Logout from './components/Logout';
 import verifyId from './components/verifyId';
@@ -18,8 +17,7 @@ export default function App(){
       <Switch>
         <Route path='/' exact component={Home} />
         <ProtectedRoute path='/profile' comp={Profile} />
-        <ProtectedRoute path='/join' comp={Join} />
-        <ProtectedRoute path='/chat' comp={Chat} />
+\        <ProtectedRoute path='/chat' comp={Chat} />
         <ProtectedRoute path='/nearby' comp={Nearby} /> 
         <Route path='*' component={Home} />
       </Switch>
