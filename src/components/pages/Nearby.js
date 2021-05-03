@@ -26,6 +26,7 @@ function Nearby(props){
   useEffect(() => { 
     getWeather();
   }, [])
+  
   var getWeather = () => {
     fetch(`${process.env.REACT_APP_SERVER_URL}/api/weather?location=${location.city}`)
     .then(response=>response.json())
@@ -71,10 +72,11 @@ function Nearby(props){
             <Row><Col>Sunset:</Col><Col>{weather.sunset}</Col></Row>
           </Col>
           <Col>
-          {/* <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1KnBFPTeiXNGAUgceZoEXc8lOibiFr74C" width="400" height="400"></iframe> */}
-            <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_KEY}>
+                    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1KnBFPTeiXNGAUgceZoEXc8lOibiFr74C" width="400" height="400"></iframe>
+          
+            {/* <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_KEY}>
               <GoogleMap mapContainerStyle={containerStyle} zoom={15} center={location.coordinates}/>
-            </LoadScript>
+          </LoadScript> */}
           </Col>
         </Row>
       </Container>

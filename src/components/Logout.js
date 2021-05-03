@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
+import {Button} from 'reactstrap';
 import { useGoogleLogout } from 'react-google-login';
-import {Button} from './Button.js'
 
 const clientId = process.env.REACT_APP_AUTH_CLIENT_ID;
 
@@ -20,7 +20,7 @@ function Logout(){
     onFailure,
   });
   return (
-    <Button buttonStyle=".btn--large" onClick={ signOut }>Sign out</Button>
+    <Button color="warning" onClick={signOut}>Sign out</Button>
   );
 }
 export default Logout;

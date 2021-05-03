@@ -8,8 +8,8 @@
     align-items: center;
 }
 /* Styling for the group members and a tag*/
-p,a{
-    color: rgb(255, 255, 255);
+.groupMembers{
+    color: white;
 }
 /* Hover styling for the links */
 a:hover{
@@ -47,5 +47,7 @@ a:hover{
     margin-bottom: 20px;
 }
 
-
+p.Review{
+    color: black;
+}
 
