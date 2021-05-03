@@ -29,7 +29,7 @@ function Profile(props){
   const changeOnClick = e => {
     e.preventDefault();
 
-    axios.put(`http://localhost:5000/api/users/update`, user)
+    axios.put(`${process.env.REACT_APP_SERVER_URL}/api/users/update`, user)
         .then(res => console.log(res.data)).then(alert(`Success! User information updated.\nusername: ${username}\nphone: ${phone}`))
         .catch(err => {
             console.log(err);
@@ -49,7 +49,7 @@ function Profile(props){
         </Row>
         <Row>
           <Col className='text-center'></Col>
-          <Col className='text-center'>Upload a new photo <Button color="warning" href="https://myaccount.google.com/personal-info?pli=1" target="_blank" rel="noopener noreferrer" className="btn btn-warning">Upload</Button></Col>
+          <Col className='text-center'>Upload a new photo <Button color="warning" href="https://myaccount.google.com/personal-info" target="_blank" rel="noopener noreferrer" className="btn btn-warning">Upload</Button></Col>
           <Col className='text-center'></Col>
         </Row>
         <Form onSubmit={changeOnClick} encType='multipart/form-data'>
