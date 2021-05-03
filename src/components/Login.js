@@ -18,7 +18,7 @@ function Login(){
       sessionStorage.setItem('token', res.tokenId);
       sessionStorage.setItem('image', res.profileObj.imageUrl)
       
-      user = {
+      const user = {
         name: sessionStorage.name.toString(),
         email: sessionStorage.email.toString(),
         imgURL: sessionStorage.image.toString(),
