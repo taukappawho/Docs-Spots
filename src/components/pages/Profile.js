@@ -1,8 +1,7 @@
-import React from 'react';
+import React from 'react'
 import Image from '../Image';
 import {Button,Container,Input,Row,Col} from 'reactstrap';
 import '../../App.css';
-import image from '../john_profile.jpeg';
 
 function Profile(props){
   return(

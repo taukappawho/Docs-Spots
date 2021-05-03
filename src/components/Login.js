@@ -6,42 +6,42 @@ import axios from 'axios';
 const clientId = process.env.REACT_APP_AUTH_CLIENT_ID;
 
 function Login(){
+  var user;
+  var isLoggedIn = false;
+
   const onSuccess = (res) => {
     sessionStorage.clear();
-    var isLoggedIn = false;
     if (res.profileObj.email === "jirani@towson.edu" || res.profileObj.email.split("@")[1] === "students.towson.edu"){
       isLoggedIn = true;
       sessionStorage.setItem('email', res.profileObj.email);
       sessionStorage.setItem('name', res.profileObj.name);
       sessionStorage.setItem('token', res.tokenId);
       sessionStorage.setItem('image', res.profileObj.imageUrl)
-      window.location.reload();
-
       
-  
-      console.log(user);
+      user = {
+        name: sessionStorage.name.toString(),
+        email: sessionStorage.email.toString(),
+        imgURL: sessionStorage.image.toString()
+      }
+
+      axios.post(`${process.env.REACT_APP_SERVER_URL}/api/users/add`, user)           
+      .then(res => {
+        console.log(res.data)
+        window.location.reload()
+      })
+      .catch(err => {
+        console.log(err);
+      })
       
+      return isLoggedIn;
     }
-
-    const user = {
-      name: sessionStorage.name.toString(),
-      email: sessionStorage.email.toString(),
-      imgURL: sessionStorage.image.toString()
-    }
-
-    axios.post(`${process.env.REACT_APP_SERVER_URL}/api/users/add`, user)
-           .then(res => console.log(res.data))
-           .catch(err => {
-              console.log(err);
-           })
-    return isLoggedIn;
   };
 
   const onFailure = (res) => {
     return false;
   };
 
- const { signIn } = useGoogleLogin({
+ const {signIn} = useGoogleLogin({
     onSuccess,
     onFailure,
     clientId,

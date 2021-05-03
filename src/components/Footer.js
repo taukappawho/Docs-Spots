@@ -9,26 +9,17 @@ function Footer() {
       <div className="footer-container">
           {/* Displaying the title of the website as a link */}
             <div className="docSpotsTitle">
-                <Link to="/" className="docSpotsTitleLogo">
-                    Doc's Spots
-                </Link>
+                <Link to="/" className="docSpotsTitleLogo">Doc's Spots</Link>
             </div>
             {/* Displaying Towson University as a link to the towson university website */}
             <div className="towson"><a href="https://www.towson.edu">Towson Univeristy</a></div>
             <div className="socialMedia">
                 {/* Displaying the twitter logo and when clicked goes to twitter's website */}
-                <Link className="media" target=" ">
-                <a href="https://twitter.com/"><i className="fab fa-twitter"/></a>
-                </Link>
+                <a href="http://twitter.com/TowsonU"><i className="media fab fa-twitter"/></a>
                 {/* Displaying the instagram logo and when clicked goes to instagram's website */}
-                <Link className="media" target=" ">
-                <a href="https://www.instagram.com/"><i className="fab fa-instagram"/></a>
-                </Link>
+                <a href="http://instagram.com/towsonuniversity"><i className="fab fa-instagram media"/></a>
                 {/* Displaying the facebook logo and when clicked goes to facebook's website */}
-                <Link className="media" target=" ">
-                <a href="https://www.facebook.com/"><i className="fab fa-facebook-f"/></a>
-                </Link>
-                
+                <a href="https://www.facebook.com/towsonuniversity"><i className="fab fa-facebook-f media"/></a>
             </div>
             {/* Printing the group members of the project */}
             <p className="groupMembers">Group Members: Arun Kulkarni, John Richard, Benjamin King, James Naurot, Neal Bhalodia </p>

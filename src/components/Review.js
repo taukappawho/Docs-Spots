@@ -22,7 +22,7 @@ const Review = props => {
     return (
         <Container>
             <Container>
-                <Link onClick={toggle}>{title}</Link>
+                <a onClick={toggle}>{title}</a>
             </Container>
             <Container>
                 <span className="badge badge-secondary p-2 my-1">{authorName}</span>
