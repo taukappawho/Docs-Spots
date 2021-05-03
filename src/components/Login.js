@@ -21,7 +21,9 @@ function Login(){
       user = {
         name: sessionStorage.name.toString(),
         email: sessionStorage.email.toString(),
-        imgURL: sessionStorage.image.toString()
+        imgURL: sessionStorage.image.toString(),
+        username: "",
+        phone: ""
       }
 
       axios.post(`${process.env.REACT_APP_SERVER_URL}/api/users/add`, user)           
