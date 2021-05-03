@@ -1,0 +1,33 @@
+/* Styling for the whole page */
+.chat {
+    padding: 30px;
+    text-align: center;
+    margin: auto;
+    width: 60%;
+    border: none;
+  }
+  /* Styling for just the title (h1 tag) */
+  #title{
+    color: #3C3C3C;
+    text-align: center;
+  }
+  /* styling for the submission fields */
+  form {
+    padding: 30px;
+    text-align: center;
+    color: #3C3C3C;
+  }
+  /* Styling for how to display the chat messages */
+  .formatChat{
+    padding: 30px;
+    color: #3C3C3C;
+  }
+  /* styling for all h4 tags */
+  h4 {
+    color: #FFBB00;
+    text-align: center;
+  }
+  /* styling for the when the chat message is displayed */
+  em {
+    color: #3C3C3C;
+  }
