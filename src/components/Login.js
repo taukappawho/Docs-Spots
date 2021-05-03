@@ -16,19 +16,24 @@ function Login(){
       sessionStorage.setItem('token', res.tokenId);
       sessionStorage.setItem('image', res.profileObj.imageUrl)
       window.location.reload();
+
+      
+  
+      console.log(user);
+      
     }
 
     const user = {
-      name: sessionStorage.name,
-      email: sessionStorage.email,
-      imgURL: sessionStorage.image
+      name: sessionStorage.name.toString(),
+      email: sessionStorage.email.toString(),
+      imgURL: sessionStorage.image.toString()
     }
 
     axios.post(`${process.env.REACT_APP_SERVER_URL}/api/users/add`, user)
-         .then(res => console.log(res.data))
-         .catch(err => {
-            console.log(err);
-         })
+           .then(res => console.log(res.data))
+           .catch(err => {
+              console.log(err);
+           })
     return isLoggedIn;
   };
 
