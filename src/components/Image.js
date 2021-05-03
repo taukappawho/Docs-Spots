@@ -1,4 +1,4 @@
 function Image(props){
-  return(<img href={props.pic} alt='test'/>)
+  return(<img src={props.pic} alt='test'/>)
 }
 export default Image;

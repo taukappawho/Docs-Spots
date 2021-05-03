@@ -7,11 +7,11 @@ import image from '../john_profile.jpeg';
 function Profile(props){
   return(
     <Container>
-      <h1>{sessionStorage.name.substring(0,sessionStorage.name.indexOf(" "))}'s Profile</h1>
+      <h1>{sessionStorage.name}'s Profile</h1>
       <Container>
         <Row>
           <Col className='text-center'></Col>
-          <Col className='text-center'><Image pic={image}/></Col>
+          <Col className='text-center'><Image pic={sessionStorage.image}/></Col>
           <Col className='text-center'></Col>
         </Row>
         <Row>
