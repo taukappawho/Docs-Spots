@@ -26,7 +26,7 @@ function Login(){
         phone: ""
       }
 
-      axios.post(`http://localhost:5000/api/users/add`, user)           
+      axios.post(`${process.env.REACT_APP_SERVER_URL}/api/users/add`, user)           
       .then(res => {
         console.log(res.data)
         window.location.reload()
