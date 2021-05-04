@@ -2,11 +2,18 @@ import React, {useState, useEffect} from 'react';
 import io from 'socket.io-client';
 import TextField from '@material-ui/core/TextField';
 import {Container} from 'reactstrap';
-import '../../App.css'
-import '../Chat.css'
+import '../../App.css';
+import '../Chat.css';
+
+//Used the following URL as a resource to create the socket.io client
+//https://socket.io/docs/v4/client-initialization/
+//Note: The code below does not work on the server
+//The code below is here to demonstrate that our group attempted to create a chat feature, but were unsuccessful to get it working on the hosted server
+//Used the following link to understand spread syntax in JS which is used for our arrays
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 
 //Making the connection to the server
-const socket = io('http://localhost:4000');
+const socket = io('http://localhost:4000'); //Note: This is only functional for the local server
 
 function Chat({location}){
   //initializing use state to hold empty message and name strings
